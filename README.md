@@ -17,4 +17,6 @@ Feel free to explore the projects, learn from the code, and contribute to the JS
 
 PROGRAM LIST & STATUS
 
-OrderSample --------------------- ✅ Stable
+OrderSample.json --------------------- ✅ Stable
+
+ProductSample.json ------------------- ✅ Stable
