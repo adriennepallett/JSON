@@ -1,0 +1,78 @@
+{
+    "$schema":"https://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "Order" : {
+            "type": "object",
+            "properties": {
+                "OrderId": {"type": "number"},
+                "OrderDate": {"type": "string"},
+                "ShippingPrice": {"type": "number"},
+                "OrderDetails": {
+                    "type": "object",
+                    "properties": {
+                        "OrderDetail": {
+                            "type": "object",
+                            "properties": {
+                                "OrderDetailId": {"type": "string"},
+                                "OrderId": {"type": "number"},
+                                "ProductId": {"type": "number"},
+                                "options": {
+                                    "type": "object",
+                                    "properties": {
+                                        "size": {
+                                            "type": "object",
+                                            "properties": {
+                                                "OptionValue": {"type": "string"}
+                                            }
+                                        },
+                                        "color": {
+                                            "type": "object",
+                                            "properties": {
+                                                "OptionValue": {"type": "string"}
+                                            }
+                                        }
+                                    }
+                                },
+                                "Quantity": {"type": "number"},
+                                "Price": {"type": "number"}
+                            }
+                        }
+                    }
+                },
+                "Customer": {
+                    "type": "object",
+                    "properties": {
+                        "CustomerId": {"type": "number"},
+                        "FirstName": {"type": "string"},
+                        "LastName": {"type": "string"},
+                        "ShippingAddressId": {"type": "number"},
+                        "BillingAddressId": {"type": "number"},
+                        "Email": {"type": "string", "format": "email"},
+                        "ShippingAddress": {
+                            "type": "object",
+                            "properties": {
+                                "AddressId": {"type": "number"},
+                                "Street1": {"type": "string"},
+                                "Street2": {"type": "string"},
+                                "City": {"type": "string"},
+                                "State": {"type": "string"},
+                                "Zip": {"type": "string"}
+                            }
+                        },
+                        "BillingAddress": {
+                            "type": "object",
+                            "properties": {
+                                "AddressId": {"type": "number"},
+                                "Street1": {"type": "string"},
+                                "City": {"type": "string"},
+                                "State": {"type": "string"},
+                                "Zip": {"type": "string"}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
